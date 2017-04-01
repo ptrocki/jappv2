@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Insurance</span> {{vm.insurance.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.insurance.name}}</span>
+        </dd>
+        <dt><span>Insurance Option</span></dt>
+        <dd>
+            <a ui-sref="insurance-option-detail({id:vm.insurance.insuranceOption.id})">{{vm.insurance.insuranceOption.id}}</a>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <a ui-sref="address-detail({id:vm.insurance.address.id})">{{vm.insurance.address.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="insurance-detail.edit({id:vm.insurance.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

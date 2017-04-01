@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "fisrt",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "second",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "third",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fourth",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170401081344",
+    "entityTableName": "insurance_option",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

@@ -1,0 +1,62 @@
+<div>
+    <h2>Insurance Options</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="insurance-option.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Insurance Option
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Fisrt</span></th>
+                    <th><span>Second</span></th>
+                    <th><span>Third</span></th>
+                    <th><span>Fourth</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="insuranceOption in vm.insuranceOptions track by insuranceOption.id">
+                    <td><a ui-sref="insurance-option-detail({id:insuranceOption.id})">{{insuranceOption.id}}</a></td>
+                    <td>{{insuranceOption.fisrt}}</td>
+                    <td>{{insuranceOption.second}}</td>
+                    <td>{{insuranceOption.third}}</td>
+                    <td>{{insuranceOption.fourth}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="insurance-option-detail({id:insuranceOption.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="insurance-option.edit({id:insuranceOption.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="insurance-option.delete({id:insuranceOption.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

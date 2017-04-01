@@ -1,0 +1,35 @@
+entity Insurance {
+	name String
+}
+entity InsuranceUser {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+}
+
+entity InsuranceOption {
+	fisrt Boolean
+    second Boolean
+    third Boolean
+    fourth Boolean
+}
+entity Address {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+    countryName String
+}
+
+relationship OneToMany {
+	Insurance{insuranceUser} to InsuranceUser
+}
+relationship ManyToOne {
+	Insurance{insuranceOption} to InsuranceOption
+}
+
+relationship ManyToOne {
+	Insurance{address} to Address
+}
+

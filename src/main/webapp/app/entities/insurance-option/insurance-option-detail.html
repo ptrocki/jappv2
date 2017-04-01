@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Insurance Option</span> {{vm.insuranceOption.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Fisrt</span></dt>
+        <dd>
+            <span>{{vm.insuranceOption.fisrt}}</span>
+        </dd>
+        <dt><span>Second</span></dt>
+        <dd>
+            <span>{{vm.insuranceOption.second}}</span>
+        </dd>
+        <dt><span>Third</span></dt>
+        <dd>
+            <span>{{vm.insuranceOption.third}}</span>
+        </dd>
+        <dt><span>Fourth</span></dt>
+        <dd>
+            <span>{{vm.insuranceOption.fourth}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="insurance-option-detail.edit({id:vm.insuranceOption.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

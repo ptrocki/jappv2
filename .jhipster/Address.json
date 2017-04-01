@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "streetAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateProvince",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170401081344",
+    "entityTableName": "address",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
