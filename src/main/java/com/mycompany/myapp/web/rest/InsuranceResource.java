@@ -26,7 +26,7 @@ public class InsuranceResource {
     private final Logger log = LoggerFactory.getLogger(InsuranceResource.class);
 
     private static final String ENTITY_NAME = "insurance";
-        
+
     private final InsuranceRepository insuranceRepository;
 
     public InsuranceResource(InsuranceRepository insuranceRepository) {
@@ -82,8 +82,11 @@ public class InsuranceResource {
      */
     @GetMapping("/insurances")
     @Timed
-    public List<Insurance> getAllInsurances() {
+    public List<Insurance> getAllInsurances(@RequestParam(required=false) String query) {
         log.debug("REST request to get all Insurances");
+        if (query != null) {
+            return insuranceRepository.findByNameContaining(query);
+        }
         List<Insurance> insurances = insuranceRepository.findAll();
         return insurances;
     }

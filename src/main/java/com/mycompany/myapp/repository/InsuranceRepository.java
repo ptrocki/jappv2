@@ -11,5 +11,5 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public interface InsuranceRepository extends JpaRepository<Insurance,Long> {
-
+    List<Insurance> findByNameContaining(String name);
 }
