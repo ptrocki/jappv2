@@ -14,6 +14,21 @@
         </div>
     </div>
     <br/>
+
+    <form name="searchForm" class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="insuranceQuery" id="insuranceQuery" placeholder="query">
+        </div>
+        <button class="btn btn-info" ng-click="vm.search(insuranceQuery)">
+            <span class="glyphicon glyphicon-search"></span> 
+            <span>Search an Entity</span>
+        </button>
+        <button class="btn btn-info" ng-click="vm.clear()" ng-show="insuranceQuery != null">
+            <span class="glyphicon glyphicon-trash"></span> 
+            <span>Clear search</span>
+        </button>
+    </form>
+
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
